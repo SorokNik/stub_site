@@ -2,3 +2,24 @@
 @import 'global/*.scss';
 @import '**/_*.scss';
 @import '../components/**/*.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500&family=Syncopate&display=swap');
+
+.slide-1{
+    background: linear-gradient(180deg, #00D1FF 0%, #003071 100%);
+}
+
+.slide-2{
+    background: linear-gradient(180deg, #FF00D6 0%, #540647 100%);
+}
+
+.slide-3{
+    background: linear-gradient(180deg, #00E817 0%, #0C5464 100%);
+}
+
+.slide-4{
+    background: linear-gradient(180deg, #FFF500 0%, #CF750B 100%);
+}
+
+.slide-5{
+    background: linear-gradient(180deg, #6A6A6A 0%, #1F1F1F 100%);
+}

@@ -1,0 +1,78 @@
+.slide{
+    padding-top: 4vh;
+    height: 100vh;
+    .container{
+        width: 80rem;
+        margin-right: 4rem;
+        position: relative;
+    }
+    .header{
+        width: 100%;
+        &__descr{
+            width: 46%;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.3rem;
+            font-style: normal;
+            line-height: 101%;
+        }
+        &__logo{
+            @include bg;
+            min-height: 4.5rem;
+            min-width: 4.5rem;
+        }
+    }
+    &__swirl-r{
+        position: absolute;
+        top: 10.5rem;
+        right: 3rem;
+        width: 47rem;
+    }
+    &__pic{
+        position: absolute;
+        top: 11rem;
+        width: 65rem;
+    }
+    &__wrapper{
+        width: 56rem;
+    }
+    &__title{
+        margin-top: 34vh;
+        width: 37rem;
+        font-family: 'Syncopate';
+        font-size: 8rem;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    &__descr{
+        font-size: 1.8rem;
+        line-height: 115%;
+        width: 47rem;
+        margin-top: 4vh;
+        margin-right: 0;
+        margin-left: auto;
+    }
+    &__link{
+        color: #FFF;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 115%;
+        text-transform: uppercase;
+        @include bg;
+        margin-top: 8vh;
+    }
+    &__link::before{
+        content: '';
+        display: inline-block;
+        @include bg;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1.2rem;
+    }
+    .footer{
+        color: #B9B9B9;
+        margin-top: 8vh;
+        font-size: 1rem;
+    }
+}
+

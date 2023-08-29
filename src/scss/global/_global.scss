@@ -39,7 +39,7 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 0.52vw;
 }
 
 html,
@@ -49,7 +49,9 @@ body {
 }
 
 body {
-	font-size: 1rem;
+	color: #fff;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
 }
 
 ul,
@@ -63,4 +65,12 @@ h4,
 h5,
 h6 {
 	margin: 0;
+}
+
+.hide{
+	display: none;
+}
+
+.show{
+	display: block;
 }
