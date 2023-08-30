@@ -1,41 +1,62 @@
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
 .slide{
     padding-top: 4vh;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
+    .slide__swirl-l{
+        position: absolute;
+        bottom: -100%;
+        transition: 2s ease;
+    }
     .container{
-        width: 80rem;
+        min-width: 80rem;
         margin-right: 4rem;
         position: relative;
+        transition: 1s ease;
     }
     .header{
         width: 100%;
-        &__descr{
-            width: 46%;
+        .header__descr{
+            width: 37rem;
             font-family: 'Nunito', sans-serif;
             font-size: 1.3rem;
             font-style: normal;
             line-height: 101%;
         }
-        &__logo{
+        .header__logo{
             @include bg;
             min-height: 4.5rem;
             min-width: 4.5rem;
         }
     }
-    &__swirl-r{
+    .slide__swirl-r{
         position: absolute;
         top: 10.5rem;
         right: 3rem;
         width: 47rem;
+        z-index: 1;
+        animation: spin 7s linear 0s infinite;
     }
-    &__pic{
+    .slide__pic{
         position: absolute;
         top: 11rem;
         width: 65rem;
+        z-index: 3;
     }
-    &__wrapper{
+    .slide__wrapper{
         width: 56rem;
+        position: relative;
+        z-index: 2;
+        transition: all 0.5s ease;
+        
+        
     }
-    &__title{
+    .slide__title{
         margin-top: 34vh;
         width: 37rem;
         font-family: 'Syncopate';
@@ -43,7 +64,7 @@
         line-height: normal;
         text-transform: uppercase;
     }
-    &__descr{
+    .slide__descr{
         font-size: 1.8rem;
         line-height: 115%;
         width: 47rem;
@@ -51,7 +72,7 @@
         margin-right: 0;
         margin-left: auto;
     }
-    &__link{
+    .slide__link{
         color: #FFF;
         text-decoration: none;
         font-size: 1.6rem;
@@ -61,7 +82,7 @@
         @include bg;
         margin-top: 8vh;
     }
-    &__link::before{
+    .slide__link::before{
         content: '';
         display: inline-block;
         @include bg;
