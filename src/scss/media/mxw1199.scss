@@ -1,0 +1,204 @@
+@media screen and (max-width: 1199px) {
+    html{
+        font-size: 1vw;
+    }
+    .main{
+        grid-template-columns: 2fr .15fr .15fr .15fr .15fr;
+        .slide-1{
+            
+            .slide__swirl-l-1{
+                left: -9rem;
+                width: 42rem;
+            }
+            .slide__pic-1{
+                top: 14vh;
+                right: -1rem;
+            }
+            .slide__swirl-r-1{
+                top: 14vh;
+                right: 3rem;
+            }
+            .container{
+                min-width: 58.6rem;
+            }
+        }
+        .slide-1:hover{
+            .slide__swirl-l-1{
+                transform: translateY(-123vh);
+            }
+        }
+    
+    
+        .slide-2, .slide-3{
+            .slide__wrapper{
+                width: 36rem;
+            }
+            // .slide__descr{
+
+            // }
+        }
+    
+    
+        .slide-2{
+           
+            .slide__swirl-l-2{
+
+            }
+            .slide__pic-2{
+                width: 37rem;
+                
+            }
+            .slide__swirl-r-2{
+                width: 42rem;
+                top: 10.5vh;
+                right: 2rem;
+            }
+        }
+        .slide-2:hover{
+            .slide__swirl-l-2{
+
+            }
+        }
+        
+    
+        .slide-3{
+           
+            .slide__swirl-l-3{
+
+            }
+            .slide__pic-3{
+
+            }
+            .slide__swirl-r-3{
+
+            }
+        }
+        .slide-3:hover{
+            .slide__swirl-l-3{
+
+            }
+        }
+        
+    
+        .slide-4{
+            
+            .slide__swirl-l-4{
+
+            }
+            .slide__pic-4{
+
+            }
+            .slide__swirl-r-4{
+
+            }
+        }
+        .slide-4:hover{
+            .slide__swirl-l-4{
+
+            }
+        }
+        
+    
+        .slide-5{
+            padding-left: 0;
+            padding-right: 0;
+
+            .slide__swirl-l-5{
+    
+            }
+            .slide__pic-5{
+
+            }
+            .slide__swirl-r-5{
+
+            }
+        }
+        .slide-5:hover{
+            .slide__swirl-l-5{
+
+            }
+        }
+    }
+
+    .main:has(.slide-1:hover){
+        grid-template-columns: 2fr .15fr .15fr .15fr .15fr;
+    }
+    
+    .main:has(.slide-2:hover){
+        grid-template-columns: .15fr 2fr .15fr .15fr .15fr;
+    }
+    
+    .main:has(.slide-3:hover){
+        grid-template-columns: .15fr .15fr 2fr .15fr .15fr;
+    }
+    
+    .main:has(.slide-4:hover){
+        grid-template-columns: .15fr .15fr .15fr 2fr .15fr;
+    }
+    
+    .main:has(.slide-5:hover){
+        grid-template-columns: .15fr .15fr .15fr .15fr 2fr;
+    }
+}
+
+@media screen and (max-width: 1199px) and (orientation: landscape) {
+    .slide{
+        padding-top: 5.5vh;
+        .slide__swirl-l{
+
+        }
+        .container{
+            min-width: 58.6rem;
+            margin-right: 1rem;
+            transition: .5s all ease;
+        }
+        .header{
+
+            .header__descr{
+
+            }
+            .header__logo{
+                min-height: 3.5rem;
+                min-width: 3.5rem;
+            }
+        }
+        .slide__swirl-r{
+            width: 37rem;
+        }
+        .slide__pic{
+            width: 52rem;
+        }
+        .slide__wrapper{
+            width: 36rem;           
+        }
+        .slide__title{
+            margin-top: 38vh;
+            width: 36rem;
+            font-size: 6.4rem;
+        }
+        .slide__descr{
+            margin-top: 1.37vh;
+            font-size: 1.6rem;
+            width: 36rem;
+            margin-left: 0;
+            margin-right: auto;
+        }
+        .slide__link{
+            margin-top: 3.3vh;
+        }
+        .slide__link::before{
+
+        }
+        .footer{
+            margin-top: 4.5vh;
+        }
+    }
+    .slide:hover{
+        .slide__swirl-r{
+            animation: none;
+        }
+        .container{
+            margin-right: 2rem;
+        }
+    }
+}

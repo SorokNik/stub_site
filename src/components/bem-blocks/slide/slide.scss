@@ -12,6 +12,7 @@
         position: absolute;
         bottom: -100%;
         transition: 2s ease;
+        transition-delay: 0.5s;
     }
     .container{
         min-width: 80rem;
@@ -39,14 +40,17 @@
         top: 10.5rem;
         right: 3rem;
         width: 47rem;
+        height: 47rem;
+        @include bg;
         z-index: 1;
-        animation: spin 7s linear 0s infinite;
+        // animation: spin 7s linear 0s infinite;
     }
     .slide__pic{
         position: absolute;
         top: 11rem;
         width: 65rem;
         z-index: 3;
+        display: none;
     }
     .slide__wrapper{
         width: 56rem;
@@ -92,8 +96,14 @@
     }
     .footer{
         color: #B9B9B9;
-        margin-top: 8vh;
+        margin-top: 6vh;
         font-size: 1rem;
     }
 }
+
+// .slide:hover{
+//     .slide__swirl-r{
+//         animation: spin 7s linear 0s infinite;
+//     }
+// }
 
