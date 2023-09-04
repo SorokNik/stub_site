@@ -6,25 +6,28 @@
         grid-template-columns: 2fr .15fr .15fr .15fr .15fr;
         .slide-1{
             
-            .slide__swirl-l-1{
-                left: -9rem;
-                width: 42rem;
+            .--svg__swirl-l-1{
+                left: -15rem;
+                width: 50rem;
+                height: 50rem;
             }
             .slide__pic-1{
                 top: 14vh;
                 right: -1rem;
             }
-            .slide__swirl-r-1{
-                top: 14vh;
-                right: 3rem;
+            #swirl-r-1{
+                width: 40rem;
+                height: 40rem;
+                right: 0;
+                top: 9vh;
             }
             .container{
                 min-width: 58.6rem;
             }
         }
         .slide-1:hover{
-            .slide__swirl-l-1{
-                transform: translateY(-123vh);
+            .--svg__swirl-l-1{
+                transform: translateY(-125vh) rotate(77deg);
             }
         }
     
@@ -41,22 +44,24 @@
     
         .slide-2{
            
-            .slide__swirl-l-2{
-
+            .--svg__swirl-l-2{
+                left: -24rem;
+                width: 53rem;
+                height: 53rem;
             }
             .slide__pic-2{
                 width: 37rem;
                 
             }
-            .slide__swirl-r-2{
+            #swirl-r-2{
                 width: 42rem;
-                top: 10.5vh;
+                top: 0;
                 right: 2rem;
             }
         }
         .slide-2:hover{
-            .slide__swirl-l-2{
-
+            .--svg__swirl-l-2{
+                transform: translateY(-124vh) rotate(90deg);
             }
         }
         
@@ -67,10 +72,13 @@
 
             }
             .slide__pic-3{
-
+                width: 42rem;
             }
-            .slide__swirl-r-3{
-
+            #swirl-r-3{
+                width: 36rem;
+                height: 36rem;
+                top: 17vh;
+                right: 3rem;
             }
         }
         .slide-3:hover{

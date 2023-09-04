@@ -10,9 +10,9 @@
     display: grid;
     transition: 1s;
     // 1 слайд
-    // grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 1fr;
+    grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 1fr;
     // 2 слайд
-    grid-template-columns: 0.75fr 2fr 0.2fr 0.2fr 1fr;
+    // grid-template-columns: 0.75fr 2fr 0.2fr 0.2fr 1fr;
     // 3 слайд
     // grid-template-columns: 0.75fr 0.2fr 2fr 0.2fr 1fr;
     // 4 слайд
@@ -39,7 +39,7 @@
             position: absolute;
             width: 50rem;
             right: -1rem;
-            top: 6rem;
+            top: 6vh;
             transform: rotate(176deg);
         }
         .container{
@@ -48,7 +48,7 @@
     }
     .slide-1:hover{
         .--svg__swirl-l-1{
-            transform: translateY(-137vh) rotate(69deg);
+            transform: translateY(-133vh) rotate(77deg);
         }
     }
 
@@ -66,9 +66,9 @@
     .slide-2{
         background: linear-gradient(180deg, #FF00D6 0%, #540647 100%);
         .--svg__swirl-l-2{
-            left: -32rem;
-            width: 50rem;
-            height: 50rem;
+            left: -42rem;
+            width: 64rem;
+            height: 64rem;
             @include bg;
         }
         .slide__pic-2{
@@ -77,15 +77,17 @@
             right: 8rem;
             
         }
-        .slide__swirl-r-2{
-            top: 15.5vh;
-            right: 2rem;
-            width: 50rem;
+        #swirl-r-2{
+                position: absolute;
+                width: 54rem;
+                height: 54rem;
+                top: 10vh;
+                right: 0;
         }
     }
     .slide-2:hover{
         .--svg__swirl-l-2{
-            transform: translateY(-123vh);
+            transform: translateY(-128vh) rotate(90deg);
         }
     }
     
@@ -103,15 +105,18 @@
             width: 60rem;
             right: -6rem;
         }
-        .slide__swirl-r-3{
-            top: 13.5vh;
-            right: -1rem;
-            width: 44rem;
+        #swirl-r-3{
+            position: absolute;
+            width: 49rem;
+            height: 49rem;
+            top: 19vh;
+            right: 2rem;
+            transform: rotate(210deg);
         }
     }
     .slide-3:hover{
         .--svg__swirl-l-3{
-            transform: translateY(-131vh);
+            transform: translateY(-129vh);
         }
     }
     
@@ -129,7 +134,8 @@
             width: 65rem;
             right: 5rem;
         }
-        .slide__swirl-r-4{
+        #swirl-r-4{
+            position: absolute;
             top: 11.5vh;
             right: -1rem;
             width: 50rem;
@@ -137,7 +143,7 @@
     }
     .slide-4:hover{
         .--svg__swirl-l-4{
-            transform: translateY(-139vh);
+            transform: translateY(-134vh);
         }
     }
     
@@ -148,9 +154,9 @@
         background: linear-gradient(180deg, #6A6A6A 0%, #1F1F1F 100%);
         transition: 1s ease;
         .--svg__swirl-l-5{
-            left: -26rem;
-            width: 65rem;  
-            height: 65rem;
+            left: -27rem;
+            width: 68rem;
+            height: 68rem;
             @include bg;
         }
         .slide__pic-5{
@@ -158,7 +164,8 @@
             width: 70rem;
             right: -6rem;
         }
-        .slide__swirl-r-5{
+        #swirl-r-5{
+            position: absolute;
             top: 10.5vh;
             right: -5rem;
             width: 46rem;
@@ -166,30 +173,30 @@
     }
     .slide-5:hover{
         .--svg__swirl-l-5{
-            transform: translateY(-120vh);
+            transform: translateY(-125vh);
         }
     }
     
 }
 
-// .main:has(.slide-1:hover){
-//     grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 1fr;
-// }
+.main:has(.slide-1:hover){
+    grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 1fr;
+}
 
-// .main:has(.slide-2:hover){
-//     grid-template-columns: 0.75fr 2fr 0.2fr 0.2fr 1fr;
-// }
+.main:has(.slide-2:hover){
+    grid-template-columns: 0.75fr 2fr 0.2fr 0.2fr 1fr;
+}
 
-// .main:has(.slide-3:hover){
-//     grid-template-columns: 0.75fr 0.2fr 2fr 0.2fr 1fr;
-// }
+.main:has(.slide-3:hover){
+    grid-template-columns: 0.75fr 0.2fr 2fr 0.2fr 1fr;
+}
 
-// .main:has(.slide-4:hover){
-//     grid-template-columns: 0.75fr 0.2fr 0.2fr 2fr 1fr;
-// }
+.main:has(.slide-4:hover){
+    grid-template-columns: 0.75fr 0.2fr 0.2fr 2fr 1fr;
+}
 
-// .main:has(.slide-5:hover){
-//     grid-template-columns: 0.35fr .15fr .15fr .15fr 2fr;
-// }
+.main:has(.slide-5:hover){
+    grid-template-columns: 0.35fr .15fr .15fr .15fr 2fr;
+}
 
 
