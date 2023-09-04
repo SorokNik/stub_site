@@ -1,0 +1,112 @@
+@keyframes changeColor1 {
+    0%, 100% {
+        stop-color: #91cbe1;
+    }
+    50% {
+        stop-color: #0097cf;
+
+    }
+}
+
+@keyframes changeColor2 {
+    0%, 100% {
+        stop-color: #0097cf;
+    }
+    50% {
+        stop-color: #91cbe1;
+
+    }
+}
+
+
+#b stop:nth-child(1),
+#c stop:nth-child(1),
+#d stop:nth-child(1),
+#e stop:nth-child(1),
+#f stop:nth-child(1),
+#a stop:nth-child(1),
+#g stop:nth-child(1),
+#h stop:nth-child(1),
+#i stop:nth-child(1),
+#j stop:nth-child(1),
+#k stop:nth-child(1),
+#l stop:nth-child(1),
+#m stop:nth-child(1),
+#n stop:nth-child(1),
+#o stop:nth-child(1),
+#p stop:nth-child(1),
+#q stop:nth-child(1),
+#r stop:nth-child(1),
+#s stop:nth-child(1),
+#t stop:nth-child(1),
+#u stop:nth-child(1)
+{
+    animation: changeColor1 2s linear alternate infinite both ;
+}
+
+#c stop:nth-child(1){animation-delay: 0.25s;}
+#d stop:nth-child(1){animation-delay: 0.5s;}
+#e stop:nth-child(1){animation-delay: 0.75s;}
+#f stop:nth-child(1){animation-delay: 1s;}
+#a stop:nth-child(1){animation-delay: 1.25s;}
+#g stop:nth-child(1){animation-delay: 1.5s;}
+#h stop:nth-child(1){animation-delay: 1.75s;}
+#i stop:nth-child(1){animation-delay: 2s;}
+#j stop:nth-child(1){animation-delay: 2.25s;}
+#k stop:nth-child(1){animation-delay: 2.5s;}
+#l stop:nth-child(1){animation-delay: 2.75s;}
+#m stop:nth-child(1){animation-delay: 3s;}
+#n stop:nth-child(1){animation-delay: 3.25s;}
+#o stop:nth-child(1){animation-delay: 3.5s;}
+#p stop:nth-child(1){animation-delay: 3.75s;}
+#q stop:nth-child(1){animation-delay: 4s;}
+#r stop:nth-child(1){animation-delay: 4.25s;}
+#s stop:nth-child(1){animation-delay: 4.5s;}
+#t stop:nth-child(1){animation-delay: 4.75s;}
+#u stop:nth-child(1){animation-delay: 5s;}
+
+#b stop:nth-child(2),
+#c stop:nth-child(2),
+#d stop:nth-child(2),
+#e stop:nth-child(2),
+#f stop:nth-child(2),
+#a stop:nth-child(2),
+#g stop:nth-child(2),
+#h stop:nth-child(2),
+#i stop:nth-child(2),
+#j stop:nth-child(2),
+#k stop:nth-child(2),
+#l stop:nth-child(2),
+#m stop:nth-child(2),
+#n stop:nth-child(2),
+#o stop:nth-child(2),
+#p stop:nth-child(2),
+#q stop:nth-child(2),
+#r stop:nth-child(2),
+#s stop:nth-child(2),
+#t stop:nth-child(2),
+#u stop:nth-child(2)
+{
+    animation: changeColor2 2s linear alternate infinite both ;
+}
+
+#c stop:nth-child(2){animation-delay: 0.25s;}
+#d stop:nth-child(2){animation-delay: 0.5s;}
+#e stop:nth-child(2){animation-delay: 0.75s;}
+#f stop:nth-child(2){animation-delay: 1s;}
+#a stop:nth-child(2){animation-delay: 1.25s;}
+#g stop:nth-child(2){animation-delay: 1.5s;}
+#h stop:nth-child(2){animation-delay: 1.75s;}
+#i stop:nth-child(2){animation-delay: 2s;}
+#j stop:nth-child(2){animation-delay: 2.25s;}
+#k stop:nth-child(2){animation-delay: 2.5s;}
+#l stop:nth-child(2){animation-delay: 2.75s;}
+#m stop:nth-child(2){animation-delay: 3s;}
+#n stop:nth-child(2){animation-delay: 3.25s;}
+#o stop:nth-child(2){animation-delay: 3.5s;}
+#p stop:nth-child(2){animation-delay: 3.75s;}
+#q stop:nth-child(2){animation-delay: 4s;}
+#r stop:nth-child(2){animation-delay: 4.25s;}
+#s stop:nth-child(2){animation-delay: 4.5s;}
+#t stop:nth-child(2){animation-delay: 4.75s;}
+#u stop:nth-child(2){animation-delay: 5s;}

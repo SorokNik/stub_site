@@ -4,121 +4,15 @@
 @import '../components/**/*.scss';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500&family=Syncopate&display=swap');
 
-@keyframes changeColor {
-    0%, 100% {
-        stop-color: #91cbe1;
-      }
-      50% {
-        stop-color: #0097cf;
-      }
-  }
 
-  
-  #b stop{
-    animation-name: changeColor;
-    animation-duration: 2s;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-  }
-
-  #c stop{
-    animation-name: changeColor;
-    animation-duration: 2s;
-    animation-delay: 0.25s;
-    animation-iteration-count: infinite;
-  }
-
-  #d stop{
-    animation-name: changeColor;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
-    animation-iteration-count: infinite;
-  }
-
-  #e stop{
-    animation-name: changeColor;
-    animation-duration: 2s;
-    animation-delay: 0.75s;
-    animation-iteration-count: infinite;
-  }
-
-//   #f stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #a stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #g stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #h stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #i stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #j stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #k stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #l stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #m stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #n stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #o stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #p stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #q stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #r stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #s stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #t stop{
-//     animation: changeColor 2s  alternate;
-//   }
-
-//   #u stop{
-//     animation: changeColor 2s  alternate;
-//   }
-//   .pth{
-//     animation: changecolor 4s linear infinite;
-// }
 
 .main{
     display: grid;
     transition: 1s;
-    grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 1fr;
+    // 1 слайд
+    // grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 1fr;
     // 2 слайд
-    // grid-template-columns: 0.75fr 2fr 0.2fr 0.2fr 1fr;
+    grid-template-columns: 0.75fr 2fr 0.2fr 0.2fr 1fr;
     // 3 слайд
     // grid-template-columns: 0.75fr 0.2fr 2fr 0.2fr 1fr;
     // 4 слайд
@@ -131,10 +25,9 @@
     .slide-1{
         background: linear-gradient(180deg, #00D1FF 0%, #003071 100%);
         .--svg__swirl-l-1{
-            left: 0;
-            width: 47rem;
-            height: 47rem;
-            transform: translateY(-136vh);
+            left: -9rem;
+            width: 59rem;
+            height: 59rem;
             @include bg;
         }
         .slide__pic-1{
@@ -142,19 +35,20 @@
             right: -8rem;
             transition: 1s ease;
         }
-        .slide__swirl-r-1{
-            top: 9vh;
-            right: -4rem;
-            transition: 1s ease;
+        #swirl-r-1{
+            position: absolute;
+            width: 50rem;
+            right: -1rem;
+            top: 6rem;
+            transform: rotate(176deg);
         }
-        
         .container{
             min-width: 60rem;
         }
     }
     .slide-1:hover{
         .--svg__swirl-l-1{
-            transform: translateY(-136vh);
+            transform: translateY(-137vh) rotate(69deg);
         }
     }
 
