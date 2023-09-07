@@ -1,4 +1,4 @@
-@media screen and (max-width: 1199px) {
+@media  (max-width: 1199px) {
     html{
         font-size: 1vw;
     }
@@ -158,7 +158,7 @@
     }
 }
 
-@media screen and (max-width: 1199px) and (orientation: landscape) {
+@media  (max-width: 1199px) and (orientation: landscape) {
     .slide{
         padding-top: 5.5vh;
         .container{
@@ -198,7 +198,7 @@
             margin-top: 3.3vh;
         }
         .footer{
-            margin-top: 4.5vh;
+            margin-top: 2.5vh;
         }
     }
     .slide:hover{
@@ -221,7 +221,7 @@
     }
 }
 
-@media screen and (max-width: 1199px) and (min-aspect-ratio: 200/123) and (orientation: landscape){
+@media  (max-width: 1199px) and (min-aspect-ratio: 200/123) and (orientation: landscape){
     .main .slide-1 .container,
     .slide .container {
         min-width: 69rem;
@@ -347,7 +347,7 @@
     
 }
 
-@media screen and (max-width: 1199px) and (orientation: portrait){
+@media  (max-width: 1199px) and (orientation: portrait){
     .main .slide-1 .container,
     .slide .container {
         min-width: 62rem;
