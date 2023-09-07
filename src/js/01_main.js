@@ -2,7 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const main = document.querySelector('.main'),
           slides = document.querySelectorAll('.slide'),
-          body = document.querySelector('body');
+          body = document.querySelector('body'),
+          startHeader = document.querySelector('.header-start-mob'),
+          startHeaderDescr = document.querySelector('.header__descr-start-mob'),
+          startHeaderLogo = document.querySelector('.header__logo-start-mob'),
+          startPic = document.querySelector('.slide-1-start-mob'),
+          startSlide = document.querySelector('.slide__pic-1-start-mob'),
+          startSwirl =  document.querySelector('.swirl-r-1-start-mob');
 
 //==========ОБЪЯВЛЕНИЕ ФУНКЦИЙ==========
 
@@ -55,61 +61,47 @@ slides[0].querySelectorAll('animateTransform').forEach(svgAnimation => svgAnimat
         removeAnimation(min, current, max, arr)
     }
 
-//==========ФУНКЦИЯ ДЛЯ РАБОТЫ ФУНКЦИОНАЛА ЛЕНДА, КОГДА :HAS НЕ РАБОТАЕТ==========  
+//==========ФУНКЦИЯ ДЛЯ РАБОТЫ ФУНКЦИОНАЛА ЛЕНДА, КОГДА :HAS НЕ РАБОТАЕТ==========     
 
-    const workWithoutHas = () => {
+    const hasNotSupported = (min, current, max, cssDeskClass, cssTabLanClass, cssTabPorClass, cssMobClass, wrapper) => {
 
-        if(body.clientWidth>1199){
-            
-            assignMultipleEvents(slides[0], ['mouseover', 'click'], ()=>main.style.gridTemplateColumns = '2fr 0.2fr 0.2fr 0.2fr 1fr');
-            assignMultipleEvents(slides[1], ['mouseover', 'click'], ()=>main.style.gridTemplateColumns = '0.75fr 2fr 0.2fr 0.2fr 1fr');
-            assignMultipleEvents(slides[2], ['mouseover', 'click'], ()=>main.style.gridTemplateColumns = '0.75fr 0.2fr 2fr 0.2fr 1fr');
-            assignMultipleEvents(slides[3], ['mouseover', 'click'], ()=>main.style.gridTemplateColumns = '0.75fr 0.2fr 0.2fr 2fr 1fr');
-            assignMultipleEvents(slides[4], ['mouseover', 'click'], ()=>main.style.gridTemplateColumns = '0.35fr .15fr .15fr .15fr 2fr');        
+        function removeExcessClass (val) {
 
-            slides.forEach(slide => {
-                slide.addEventListener('mouseout', () => {
-                    
-                    main.style.gridTemplateColumns = '2fr 0.2fr 0.2fr 0.2fr 1fr';
-                })
-            });
+            wrapper.classList.remove(`${wrapper.classList.contains(`${cssDeskClass}${val}`) ? cssDeskClass :
+                                        wrapper.classList.contains(`${cssTabLanClass}${val}`) ? cssTabLanClass :
+                                        wrapper.classList.contains(`${cssTabPorClass}${val}`) ? cssTabPorClass :
+                                        wrapper.classList.contains(`${cssMobClass}${val}`) ? cssMobClass : true}${val}`);
+
         }
 
-        if(body.clientWidth>575 && body.clientWidth<=1199){
-            
-            main.style.gridTemplateColumns = '2fr .2fr .2fr .2fr .2fr';
+        if(min<current){
 
-            assignMultipleEvents(slides[0], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '2fr .15fr .15fr .15fr .15fr');
-            assignMultipleEvents(slides[1], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '.15fr 2fr .15fr .15fr .15fr');
-            assignMultipleEvents(slides[2], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '.15fr .15fr 2fr .15fr .15fr');
-            assignMultipleEvents(slides[3], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '.15fr .15fr .15fr 2fr .15fr');
-            assignMultipleEvents(slides[4], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '.15fr .15fr .15fr .15fr 2fr');        
-   
+            removeExcessClass(min);
+            removeExcessClass(min+1);
+
+            min = min + 1;
+        }
+        
+        if(max>current){
+
+            removeExcessClass(max);
+            removeExcessClass(max-1);
+
+            max = max - 1;
+        }
+        
+        if(min === current && max === current){
+
+            wrapper.classList.add(`${body.clientWidth>1199 ? cssDeskClass :
+                body.clientWidth>575 && body.clientWidth<=1199 && body.clientWidth/body.clientHeight > 1 ? cssTabLanClass :
+                body.clientWidth>575 && body.clientWidth<=1199 && body.clientWidth/body.clientHeight < 1 ? cssTabPorClass :
+                body.clientWidth<=575 && body.clientWidth/body.clientHeight < 1 ? cssMobClass : cssDeskClass}${current}`);
+
+            return;           
         }
 
-        if(body.clientWidth>575 && body.clientWidth<=1199 && body.clientWidth/body.clientHeight<1){
-            main.removeAttribute('style');
-            main.style.gridTemplateColumns = '2fr .2fr .2fr .2fr .2fr';
 
-            assignMultipleEvents(slides[0], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '2fr .2fr .2fr .2fr .2fr');
-            assignMultipleEvents(slides[1], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '.2fr 2fr .2fr .2fr .2fr');
-            assignMultipleEvents(slides[2], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '.2fr .2fr 2fr .2fr .2fr');
-            assignMultipleEvents(slides[3], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '.2fr .2fr .2fr 2fr .2fr');
-            assignMultipleEvents(slides[4], ['mouseover','click'], ()=>main.style.gridTemplateColumns = '.2fr .2fr .2fr .2fr 2fr');        
-   
-        }
-
-        if(body.clientWidth<575 && body.clientWidth/body.clientHeight<1){
-            main.removeAttribute('style');
-            main.style.gridTemplateRows = '1.8fr .2fr .2fr .2fr .2fr';
-
-            assignMultipleEvents(slides[0], ['mouseover','click'], ()=>main.style.gridTemplateRows = '1.8fr .2fr .2fr .2fr .2fr');
-            assignMultipleEvents(slides[1], ['mouseover','click'], ()=>main.style.gridTemplateRows = '.2fr 1.8fr .2fr .2fr .2fr');
-            assignMultipleEvents(slides[2], ['mouseover','click'], ()=>main.style.gridTemplateRows = '.2fr .2fr 1.8fr .2fr .2fr');
-            assignMultipleEvents(slides[3], ['mouseover','click'], ()=>main.style.gridTemplateRows = '.2fr .2fr .2fr 1.8fr .2fr');
-            assignMultipleEvents(slides[4], ['mouseover','click'], ()=>main.style.gridTemplateRows = '.2fr .2fr .2fr .2fr 1.8fr');        
-   
-        }
+        hasNotSupported(min, current, max, cssDeskClass, cssTabLanClass, cssTabPorClass, cssMobClass, wrapper);
     }
 
 //==========ВЫЗОВ ФУНКЦИЙ==========
@@ -120,6 +112,15 @@ slides[0].querySelectorAll('animateTransform').forEach(svgAnimation => svgAnimat
             svgAnimations.forEach(svgAnimation => {
                 svgAnimation.setAttribute('values','0; 360');
             })
+
+            if(body.clientWidth < 575) {
+                startHeader.classList.remove('header-start-mob');
+                startHeaderDescr.classList.remove('header__descr-start-mob');
+                startHeaderLogo.classList.remove('header__logo-start-mob');
+                startPic.classList.remove('slide-1-start-mob');
+                startSlide.classList.remove('slide__pic-1-start-mob');
+                startSwirl.classList.remove('swirl-r-1-start-mob');
+            }          
             
             removeAnimation(0, i, slides.length-1, slides);
         })
@@ -129,27 +130,30 @@ slides[0].querySelectorAll('animateTransform').forEach(svgAnimation => svgAnimat
             slides[0].querySelectorAll('animateTransform').forEach(svgAnimation => svgAnimation.setAttribute('values','0; 360'));
         });
         
-    });
-      
-    if(!isSelectorSupported(":has(.main)")){
-
-        console.log(body.clientWidth);
-        console.log(body.clientHeight);
-        
-
-        workWithoutHas();
-    }
-
-    assignMultipleEvents(window, ['resize', 'orientationchange'], ()=>{
         if(!isSelectorSupported(":has(.main)")){
 
-            console.log(body.clientWidth);
-            console.log(body.clientHeight);
-            console.log(body.clientWidth/body.clientHeight);
-    
-            workWithoutHas();
-        }
-    });
+                assignMultipleEvents(slide, ['mouseover', 'click'], () => {               
+                    hasNotSupported(1, i+1, slides.length, 'has-not-supported__desk-', 'has-not-supported__tab-lan-', 'has-not-supported__tab-por-', 'has-not-supported__mob-', main);
+                });
 
+                assignMultipleEvents(window, ['resize', 'orientationchange'], () => {    
+                    
+                    if(body.clientWidth > 575) {
+                        startHeader.classList.add('header-start-mob');
+                        startHeaderDescr.classList.add('header__descr-start-mob');
+                        startHeaderLogo.classList.add('header__logo-start-mob');
+                        startPic.classList.add('slide-1-start-mob');
+                        startSlide.classList.add('slide__pic-1-start-mob');
+                        startSwirl.classList.add('swirl-r-1-start-mob');
+                    } 
+
+                    hasNotSupported(1, 1, slides.length, 'has-not-supported__desk-', 'has-not-supported__tab-lan-', 'has-not-supported__tab-por-', 'has-not-supported__mob-', main);
+                });
+
+                slide.addEventListener('mouseout', () => main.classList.remove(`has-not-supported__desk-${i+1}`));
+            
+        }
+
+    });
 
 });

@@ -496,3 +496,43 @@
         grid-template-columns: .2fr .2fr .2fr .2fr 2fr;
     }
 }
+
+// РАБОТА ЛЕНДА КОГДА :HAS НЕ ПОДДЕРЖИВАЕТСЯ
+
+.has-not-supported__tab-lan-default{
+    grid-template-columns: 2fr .2fr .2fr .2fr .2fr;
+}
+.has-not-supported__tab-lan-1{
+    grid-template-columns: 2fr .15fr .15fr .15fr .15fr;
+}
+.has-not-supported__tab-lan-2{
+    grid-template-columns: .15fr 2fr .15fr .15fr .15fr;
+}
+.has-not-supported__tab-lan-3{
+    grid-template-columns: .15fr .15fr 2fr .15fr .15fr;
+}
+.has-not-supported__tab-lan-4{
+    grid-template-columns: .15fr .15fr .15fr 2fr .15fr;
+}
+.has-not-supported__tab-lan-5{
+    grid-template-columns: .15fr .15fr .15fr .15fr 2fr;
+}
+
+.has-not-supported__tab-por-default{
+    grid-template-columns: 2fr .2fr .2fr .2fr .2fr;
+}
+.has-not-supported__tab-por-1{
+    grid-template-columns: 2fr .2fr .2fr .2fr .2fr;
+}
+.has-not-supported__tab-por-2{
+    grid-template-columns: .2fr 2fr .2fr .2fr .2fr;
+}
+.has-not-supported__tab-por-3{
+    grid-template-columns: .2fr .2fr 2fr .2fr .2fr;
+}
+.has-not-supported__tab-por-4{
+    grid-template-columns: .2fr .2fr .2fr 2fr .2fr;
+}
+.has-not-supported__tab-por-5{
+    grid-template-columns: .2fr .2fr .2fr .2fr 2fr;
+}

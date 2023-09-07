@@ -203,3 +203,43 @@
 }
 
 
+// РАБОТА ЛЕНДА КОГДА :HAS НЕ ПОДДЕРЖИВАЕТСЯ
+
+.has-not-supported__desk-default{
+    grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 1fr;
+}
+.has-not-supported__desk-1{
+    grid-template-columns: 2fr 0.2fr 0.2fr 0.2fr 1fr;
+}
+.has-not-supported__desk-2{
+    grid-template-columns: 0.75fr 2fr 0.2fr 0.2fr 1fr;
+}
+.has-not-supported__desk-3{
+    grid-template-columns: 0.75fr 0.2fr 2fr 0.2fr 1fr;
+}
+.has-not-supported__desk-4{
+    grid-template-columns: 0.75fr 0.2fr 0.2fr 2fr 1fr;
+}
+.has-not-supported__desk-5{
+    grid-template-columns: 0.35fr .15fr .15fr .15fr 2fr;
+}
+
+
+.has-not-supported__mob-default{
+    grid-template-columns: 1.8fr .2fr .2fr .2fr .2fr;
+}
+.has-not-supported__mob-1{
+    grid-template-columns: 1.8fr .2fr .2fr .2fr .2fr;
+}
+.has-not-supported__mob-2{
+    grid-template-columns: .2fr 1.8fr .2fr .2fr .2fr;
+}
+.has-not-supported__mob-3{
+    grid-template-columns: .2fr .2fr 1.8fr .2fr .2fr;
+}
+.has-not-supported__mob-4{
+    grid-template-columns: .2fr .2fr .2fr 1.8fr .2fr;
+}
+.has-not-supported__mob-5{
+    grid-template-columns: .2fr .2fr .2fr .2fr 1.8fr;
+}
