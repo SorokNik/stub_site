@@ -150,7 +150,21 @@ slides[0].querySelectorAll('animateTransform').forEach(svgAnimation => svgAnimat
                     hasNotSupported(1, 1, slides.length, 'has-not-supported__desk-', 'has-not-supported__tab-lan-', 'has-not-supported__tab-por-', 'has-not-supported__mob-', main);
                 });
 
-                slide.addEventListener('mouseout', () => main.classList.remove(`has-not-supported__desk-${i+1}`));
+                slide.addEventListener('mouseout', () => {
+                    
+                    if(body.clientWidth < 575) {
+                        main.classList.remove(`has-not-supported__mob-${i+1}`)
+
+                        startHeader.classList.add('header-start-mob');
+                        startHeaderDescr.classList.add('header__descr-start-mob');
+                        startHeaderLogo.classList.add('header__logo-start-mob');
+                        startPic.classList.add('slide-1-start-mob');
+                        startSlide.classList.add('slide__pic-1-start-mob');
+                        startSwirl.classList.add('swirl-r-1-start-mob');
+                    }
+
+                    main.classList.remove(`has-not-supported__desk-${i+1}`)
+                });
             
         }
 
