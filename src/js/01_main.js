@@ -32,14 +32,7 @@ slides[0].querySelectorAll('animateTransform').forEach(svgAnimation => svgAnimat
             element.addEventListener(`${item}`, callback)
         });
     };
-
-//==========ФУНКЦИЯ ДЛЯ УДАЛЕНИЯ СЛУШАТЕЛЯ НЕСКОЛЬКИХ СОБЫТИЙ СРАЗУ==========
-
-    const removeMultipleEvents = (element, events, callback) => {
-        events.forEach(item => {
-            element.removeEventListener(`${item}`, callback)
-        });
-    };
+    
 
 //==========ФУНКЦИЯ ДЛЯ УДАЛЕНИЯ АНИМАЦИИ С НЕАКТИВНЫХ БЛОКОВ==========    
     const removeAnimation = (min, current, max, arr) => {
